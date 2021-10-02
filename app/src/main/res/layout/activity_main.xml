@@ -39,12 +39,12 @@
         <EditText
             android:id="@+id/ip_input"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:background="@drawable/input_background"
             android:ems="10"
             android:hint="Ex: 192.168.0.1"
-            android:paddingStart="15dp"
             android:inputType="textEmailAddress"
+            android:paddingStart="15dp"
             android:paddingEnd="15dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#9C9898" />
@@ -61,7 +61,7 @@
         <EditText
             android:id="@+id/port_input"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:background="@drawable/input_background"
             android:ems="10"
             android:hint="Ex: 5001"
@@ -71,15 +71,24 @@
             android:textColor="#FFFFFF"
             android:textColorHint="#9C9898" />
 
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Guardar informações"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/connect_btn"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:background="@color/white"
             android:backgroundTint="@color/white"
             android:text="Conectar"
             android:textColor="#000000" />
+
     </LinearLayout>
 
     <LinearLayout

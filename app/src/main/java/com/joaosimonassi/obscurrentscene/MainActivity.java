@@ -59,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, HelpActivity.class));
             }
         });
-
-        checkOverlayPermission();
     }
 
 
@@ -79,25 +77,10 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Ops");
         builder.setMessage(msg);
-        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) { }
-        });
-
+        builder.setPositiveButton("Ok", (arg0, arg1) -> { });
         alert = builder.create();
         alert.show();
 
-    }
-
-    // method to ask user to grant the Overlay permission
-    public void checkOverlayPermission(){
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (!Settings.canDrawOverlays(this)) {
-                // send user to the device settings
-                Intent myIntent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
-                startActivity(myIntent);
-            }
-        }
     }
 
     // check for permission again when user grants it from
