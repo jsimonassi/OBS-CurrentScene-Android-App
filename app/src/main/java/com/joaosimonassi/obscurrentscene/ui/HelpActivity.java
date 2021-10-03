@@ -1,8 +1,10 @@
-package com.joaosimonassi.obscurrentscene;
+package com.joaosimonassi.obscurrentscene.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.joaosimonassi.obscurrentscene.R;
 
 public class HelpActivity extends AppCompatActivity {
 

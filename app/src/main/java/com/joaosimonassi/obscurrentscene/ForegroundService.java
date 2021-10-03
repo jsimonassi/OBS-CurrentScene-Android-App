@@ -14,11 +14,13 @@ import android.util.Log;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
+import com.joaosimonassi.obscurrentscene.ui.components.Window;
+
 import java.util.List;
 
 public class ForegroundService extends Service {
 
-    static Window window;
+    public static Window window;
     Context context;
     public static Activity activity;
 

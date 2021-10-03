@@ -1,4 +1,4 @@
-package com.joaosimonassi.obscurrentscene;
+package com.joaosimonassi.obscurrentscene.ui.components;
 
 import android.content.Context;
 import android.graphics.PixelFormat;
@@ -49,7 +49,6 @@ public class Window {
     }
 
     public void open() {
-
         try {
             // check if the view is already
             // inflated or present in the window
@@ -61,7 +60,6 @@ public class Window {
         } catch (Exception e) {
             Log.d("Error1",e.toString());
         }
-
     }
 
     public void close() {

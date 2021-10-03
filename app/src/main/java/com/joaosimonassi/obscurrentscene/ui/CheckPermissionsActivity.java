@@ -1,14 +1,13 @@
-package com.joaosimonassi.obscurrentscene;
+package com.joaosimonassi.obscurrentscene.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
+
+import com.joaosimonassi.obscurrentscene.R;
 
 public class CheckPermissionsActivity extends AppCompatActivity {
 
@@ -28,7 +27,7 @@ public class CheckPermissionsActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if(Settings.canDrawOverlays(this)) {
-            Intent intent = new Intent(CheckPermissionsActivity.this, MainActivity.class);
+            Intent intent = new Intent(CheckPermissionsActivity.this, ConnectActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }

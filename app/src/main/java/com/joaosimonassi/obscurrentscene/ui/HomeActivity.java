@@ -1,4 +1,4 @@
-package com.joaosimonassi.obscurrentscene;
+package com.joaosimonassi.obscurrentscene.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import com.joaosimonassi.obscurrentscene.ForegroundService;
+import com.joaosimonassi.obscurrentscene.R;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -23,12 +25,7 @@ public class HomeActivity extends AppCompatActivity {
 
         startService();
         finishServiceBtn = findViewById(R.id.finish_btn);
-        finishServiceBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                closeService();
-            }
-        });
+        finishServiceBtn.setOnClickListener(v -> closeService());
     }
 
     private void closeService(){
